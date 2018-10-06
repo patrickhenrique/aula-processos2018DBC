@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="663.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.cesmac.bancomgr.dialogo.MainUIController">
+   <children>
+      <TableView fx:id="tvContas" layoutX="18.0" layoutY="79.0" prefHeight="260.0" prefWidth="309.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Numero" />
+          <TableColumn prefWidth="75.0" text="Saldo" />
+            <TableColumn prefWidth="75.0" text="Tipo" />
+            <TableColumn prefWidth="75.0" text="Status" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="14.0" text="Controle de Contas Bancarias:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvTransacoes" layoutX="344.0" layoutY="79.0" prefHeight="260.0" prefWidth="395.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Origem" />
+          <TableColumn prefWidth="75.0" text="Destino" />
+            <TableColumn prefWidth="150.0" text="Nome" />
+            <TableColumn prefWidth="75.0" text="Valor" />
+        </columns>
+      </TableView>
+      <Button layoutX="18.0" layoutY="360.0" mnemonicParsing="false" onAction="#criarContaPoup" text="Criar Conta Poupança" />
+      <Button layoutX="18.0" layoutY="399.0" mnemonicParsing="false" onAction="#criarContaCor" text="Criar Conta Corrente" />
+      <Button layoutX="18.0" layoutY="439.0" mnemonicParsing="false" onAction="#desativarConta" text="Desativar Conta" />
+      <Button layoutX="18.0" layoutY="480.0" mnemonicParsing="false" onAction="#ativarConta" text="Ativar Conta" />
+      <Button layoutX="18.0" layoutY="518.0" mnemonicParsing="false" onAction="#consultarSaldo" text="Consultar Saldo" />
+      <Button layoutX="18.0" layoutY="560.0" mnemonicParsing="false" onAction="#obterExtratoPeriodo" text="Obter Extrato Periodo" />
+      <Button layoutX="14.0" layoutY="602.0" mnemonicParsing="false" onAction="#obterExtratoGeral" text="Obter Extrato Geral" />
+      <Button layoutX="327.0" layoutY="360.0" mnemonicParsing="false" onAction="#sacar" text="Sacar" />
+      <Button layoutX="327.0" layoutY="399.0" mnemonicParsing="false" onAction="#depositar" text="Depositar" />
+      <Button layoutX="327.0" layoutY="439.0" mnemonicParsing="false" onAction="#transferir" text="Transferir" />
+      <Button layoutX="483.0" layoutY="360.0" mnemonicParsing="false" text="Aplicar Rendimento" />
+      <Button layoutX="483.0" layoutY="399.0" mnemonicParsing="false" text="Cobrar Juros" />
+      <Button layoutX="284.0" layoutY="546.0" mnemonicParsing="false" onAction="#reloadData" prefHeight="84.0" prefWidth="229.0" text="Atualizar Exibiçao">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

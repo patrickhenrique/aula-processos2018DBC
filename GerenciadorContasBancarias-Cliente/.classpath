@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GerenciadorContasBancarias-SharedModel"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GerenciadorContasBancarias-OperacoesConsulta"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GerenciadorContasBancarias-OperacoesConta"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GerenciadorContasBancarias-OperacoesMovimentacao"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GerenciadorContasBancarias-OperacoesRendimento"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GerenciadorContasBancarias-OperacoesConsultaConectores"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GerenciadorContasBancarias-OperacoesContaConectores"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GerenciadorContasBancarias-OperacoesMovimentacaoConectores"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GerenciadorContasBancarias-OperacoesRendimentoConectores"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
