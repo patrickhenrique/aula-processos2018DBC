@@ -51,6 +51,10 @@ public abstract class Conta {
 		return saldo;
 	}
 	
+	public void setSaldo(float valor){
+		this.saldo = valor;
+	}
+	
 	public boolean validarSenha(int senha) {
 		if(gerarHash(senha).equals(this.hashSenha))
 			return true;
