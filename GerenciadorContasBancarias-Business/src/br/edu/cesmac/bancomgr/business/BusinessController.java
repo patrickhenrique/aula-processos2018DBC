@@ -34,6 +34,17 @@ public class BusinessController implements INegocio {
 			this.contasCadastradas = new ArrayList<>();
 		return this.contasCadastradas;
 	}
+	
+	@Override
+	public Conta obterConta(int numeroConta) {
+		Conta output = null;
+		for(Conta c : this.contasCadastradas) {
+			if(c.getNumero() == numeroConta) {
+				return c;
+			}
+		}
+		return output;
+	}
 
 	@Override
 	public List<Transacao> obterTransacoes() {

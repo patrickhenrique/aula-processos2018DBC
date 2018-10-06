@@ -10,6 +10,7 @@ import br.edu.cesmac.bancomgr.sharedmodel.Transacao;
 
 public interface INegocio {
 	public List<Conta> obterContas();
+	public Conta obterConta(int numeroConta);
 	public List<Transacao> obterTransacoes();
 	
 	public void definirDadosBanco(Banco b);
