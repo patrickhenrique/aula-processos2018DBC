@@ -124,6 +124,10 @@ public abstract class Conta {
 	}
 	
 	
+	public void setStatus(int status) {
+		this.status = status;
+	}
+	
 	
 	@Override
 	public boolean equals(Object obj) {
