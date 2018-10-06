@@ -1,5 +1,7 @@
 package br.edu.cesmac.bancomgr.business;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import br.edu.cesmac.bancomgr.sharedmodel.Banco;
@@ -18,99 +20,136 @@ public class BusinessController implements INegocio {
 	//DUMMY DATABASE - FIM
 	
 	
+	public BusinessController() {
+		this.contasCadastradas = new ArrayList<>();
+		this.clientesCadastradas = new ArrayList<>();
+		this.categoriasClientesCadastradas = new ArrayList<>();
+		this.transacoesCadastradas = new ArrayList<>();
+	}
+	
 
 	@Override
 	public List<Conta> obterContas() {
-		// TODO Auto-generated method stub
-		return null;
+		if(this.contasCadastradas ==null)
+			this.contasCadastradas = new ArrayList<>();
+		return this.contasCadastradas;
 	}
 
 	@Override
 	public List<Transacao> obterTransacoes() {
-		// TODO Auto-generated method stub
-		return null;
+		if(this.transacoesCadastradas ==null)
+			this.transacoesCadastradas = new ArrayList<>();
+		return this.transacoesCadastradas;
 	}
 
 	@Override
 	public void definirDadosBanco(Banco b) {
-		// TODO Auto-generated method stub
-		
+		if(b != null)
+			this.dadosBanco = b;
 	}
 
 	@Override
 	public void adicionarConta(Conta c) {
-		// TODO Auto-generated method stub
-		
+		if(!this.contasCadastradas.contains(c)) {
+			this.contasCadastradas.add(c);
+		}
 	}
 
 	@Override
 	public void adicionarTransacao(Transacao t) {
-		// TODO Auto-generated method stub
-		
+		if(!this.transacoesCadastradas.contains(t)) {
+			this.transacoesCadastradas.add(t);
+		}
 	}
 
 	@Override
 	public void adicionarCategoriaCliente(CategoriaCliente c) {
-		// TODO Auto-generated method stub
-		
+		if(!this.categoriasClientesCadastradas.contains(c)) {
+			this.categoriasClientesCadastradas.add(c);
+		}
 	}
 
 
 	@Override
 	public void adicionarCliente(Cliente c) {
-		// TODO Auto-generated method stub
-		
+		if(!this.clientesCadastradas.contains(c)) {
+			this.clientesCadastradas.add(c);
+		}
 	}
 
 	@Override
 	public void excluirConta(Conta c) {
-		// TODO Auto-generated method stub
-		
+		if(this.contasCadastradas.contains(c)) {
+			this.contasCadastradas.remove(c);
+		}
 	}
 
 
 	@Override
 	public void excluirCategoriaCliente(CategoriaCliente c) {
-		// TODO Auto-generated method stub
-		
+		if(this.categoriasClientesCadastradas.contains(c)) {
+			this.categoriasClientesCadastradas.remove(c);
+		}
 	}
 
 	
 	@Override
 	public void excluirCliente(Cliente c) {
-		// TODO Auto-generated method stub
-		
+		if(this.clientesCadastradas.contains(c)) {
+			this.clientesCadastradas.remove(c);
+		}
 	}
 	
 	@Override
 	public void excluirTransacao(Transacao t) {
-		// TODO Auto-generated method stub
-		
+		if(this.transacoesCadastradas.contains(t)) {
+			this.transacoesCadastradas.remove(t);
+		}
 	}
 
 	@Override
 	public void alterarConta(int numero, Conta c) {
-		// TODO Auto-generated method stub
-		
+		for(int i = 0; i< this.contasCadastradas.size(); i++) {
+			Conta atual = this.contasCadastradas.get(i);
+			if(atual.getNumero() == numero) {
+				this.contasCadastradas.set(i, c);
+				break;
+			}
+		}
 	}
 
 	@Override
 	public void alterarTransacao(int id, Transacao t) {
-		// TODO Auto-generated method stub
-		
+		for(int i = 0; i< this.transacoesCadastradas.size(); i++) {
+			Transacao atual = this.transacoesCadastradas.get(i);
+			if(atual.getId() == id) {
+				this.transacoesCadastradas.set(i, t);
+				break;
+			}
+		}
 	}
 
 	@Override
 	public void alterarCategoriaCliente(int id, CategoriaCliente c) {
-		// TODO Auto-generated method stub
-		
+		for(int i = 0; i< this.categoriasClientesCadastradas.size(); i++) {
+			CategoriaCliente atual = this.categoriasClientesCadastradas.get(i);
+			if(atual.getId() == id) {
+				this.categoriasClientesCadastradas.set(i, c);
+				break;
+			}
+		}
 	}
 
 
 	@Override
 	public void alterarCliente(int id, Cliente c) {
-		// TODO Auto-generated method stub
-		
+		for(int i = 0; i< this.clientesCadastradas.size(); i++) {
+			Cliente atual = this.clientesCadastradas.get(i);
+			if(atual.getId() == id) {
+				this.clientesCadastradas.set(i, c);
+				break;
+			}
+		}
 	}
 
 }
