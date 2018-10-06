@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="242.0" prefWidth="519.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.cesmac.bancomgr.dialogo.ConsultarSaldoUIController">
+   <children>
+      <Label layoutX="28.0" layoutY="14.0" text="Consultar Saldo:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="82.0" text="Numero da Conta:" />
+      <Label layoutX="20.0" layoutY="118.0" text="Senha:" />
+      <TextField fx:id="tfNumeroConta" layoutX="158.0" layoutY="77.0" />
+      <Button layoutX="430.0" layoutY="77.0" mnemonicParsing="false" onAction="#ok" text="OK" />
+      <Button layoutX="418.0" layoutY="123.0" mnemonicParsing="false" onAction="#fecharJanela" text="Cancelar" />
+      <PasswordField fx:id="pfSenha" layoutX="158.0" layoutY="113.0" />
+   </children>
+</Pane>
