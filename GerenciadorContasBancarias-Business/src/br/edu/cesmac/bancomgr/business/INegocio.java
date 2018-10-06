@@ -13,6 +13,7 @@ public interface INegocio {
 	public Conta obterConta(int numeroConta);
 	public List<Transacao> obterTransacoes();
 	
+	public Banco obterBanco();
 	public void definirDadosBanco(Banco b);
 	
 	//INSERCAO

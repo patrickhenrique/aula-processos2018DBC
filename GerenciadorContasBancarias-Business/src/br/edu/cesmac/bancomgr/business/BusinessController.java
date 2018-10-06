@@ -27,6 +27,11 @@ public class BusinessController implements INegocio {
 		this.transacoesCadastradas = new ArrayList<>();
 	}
 	
+	
+	@Override
+	public Banco obterBanco() {
+		return this.dadosBanco;
+	}
 
 	@Override
 	public List<Conta> obterContas() {
@@ -162,5 +167,4 @@ public class BusinessController implements INegocio {
 			}
 		}
 	}
-
 }
